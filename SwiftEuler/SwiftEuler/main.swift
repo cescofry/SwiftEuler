@@ -8,5 +8,18 @@
 
 import Foundation
 
-println("Hello, World!")
+
+let numberOpt = ExerciseManager.exerciseNumber()
+
+if let number = numberOpt {
+    ExerciseManager.run(number)
+}
+else {
+    println("No exercise found");
+}
+
+
+
+
+
 
