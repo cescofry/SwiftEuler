@@ -7,42 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9BC54CEB1A5C29D600A96D6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC54CEA1A5C29D600A96D6F /* AppDelegate.swift */; };
-		9BC54CED1A5C29D600A96D6F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BC54CEC1A5C29D600A96D6F /* Images.xcassets */; };
-		9BC54CF01A5C29D600A96D6F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BC54CEE1A5C29D600A96D6F /* MainMenu.xib */; };
-		9BC54CFC1A5C29D600A96D6F /* SwiftEulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC54CFB1A5C29D600A96D6F /* SwiftEulerTests.swift */; };
+		9BC54D121A5C2A7300A96D6F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC54D111A5C2A7300A96D6F /* main.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		9BC54CF61A5C29D600A96D6F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9BC54CDD1A5C29D600A96D6F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9BC54CE41A5C29D600A96D6F;
-			remoteInfo = SwiftEuler;
+/* Begin PBXCopyFilesBuildPhase section */
+		9BC54D0C1A5C2A7300A96D6F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
 		};
-/* End PBXContainerItemProxy section */
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9BC54CE51A5C29D600A96D6F /* SwiftEuler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftEuler.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BC54CE91A5C29D600A96D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9BC54CEA1A5C29D600A96D6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9BC54CEC1A5C29D600A96D6F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		9BC54CEF1A5C29D600A96D6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		9BC54CF51A5C29D600A96D6F /* SwiftEulerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftEulerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BC54CFA1A5C29D600A96D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9BC54CFB1A5C29D600A96D6F /* SwiftEulerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftEulerTests.swift; sourceTree = "<group>"; };
+		9BC54D0E1A5C2A7300A96D6F /* SwiftEuler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftEuler; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BC54D111A5C2A7300A96D6F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9BC54CE21A5C29D600A96D6F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9BC54CF21A5C29D600A96D6F /* Frameworks */ = {
+		9BC54D0B1A5C2A7300A96D6F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -52,70 +38,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9BC54CDC1A5C29D600A96D6F = {
+		9BC54D051A5C2A7300A96D6F = {
 			isa = PBXGroup;
 			children = (
-				9BC54CE71A5C29D600A96D6F /* SwiftEuler */,
-				9BC54CF81A5C29D600A96D6F /* SwiftEulerTests */,
-				9BC54CE61A5C29D600A96D6F /* Products */,
+				9BC54D101A5C2A7300A96D6F /* SwiftEuler */,
+				9BC54D0F1A5C2A7300A96D6F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		9BC54CE61A5C29D600A96D6F /* Products */ = {
+		9BC54D0F1A5C2A7300A96D6F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9BC54CE51A5C29D600A96D6F /* SwiftEuler.app */,
-				9BC54CF51A5C29D600A96D6F /* SwiftEulerTests.xctest */,
+				9BC54D0E1A5C2A7300A96D6F /* SwiftEuler */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9BC54CE71A5C29D600A96D6F /* SwiftEuler */ = {
+		9BC54D101A5C2A7300A96D6F /* SwiftEuler */ = {
 			isa = PBXGroup;
 			children = (
-				9BC54CEA1A5C29D600A96D6F /* AppDelegate.swift */,
-				9BC54CEC1A5C29D600A96D6F /* Images.xcassets */,
-				9BC54CEE1A5C29D600A96D6F /* MainMenu.xib */,
-				9BC54CE81A5C29D600A96D6F /* Supporting Files */,
+				9BC54D111A5C2A7300A96D6F /* main.swift */,
 			);
 			path = SwiftEuler;
-			sourceTree = "<group>";
-		};
-		9BC54CE81A5C29D600A96D6F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9BC54CE91A5C29D600A96D6F /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9BC54CF81A5C29D600A96D6F /* SwiftEulerTests */ = {
-			isa = PBXGroup;
-			children = (
-				9BC54CFB1A5C29D600A96D6F /* SwiftEulerTests.swift */,
-				9BC54CF91A5C29D600A96D6F /* Supporting Files */,
-			);
-			path = SwiftEulerTests;
-			sourceTree = "<group>";
-		};
-		9BC54CF91A5C29D600A96D6F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9BC54CFA1A5C29D600A96D6F /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9BC54CE41A5C29D600A96D6F /* SwiftEuler */ = {
+		9BC54D0D1A5C2A7300A96D6F /* SwiftEuler */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9BC54CFF1A5C29D600A96D6F /* Build configuration list for PBXNativeTarget "SwiftEuler" */;
+			buildConfigurationList = 9BC54D151A5C2A7300A96D6F /* Build configuration list for PBXNativeTarget "SwiftEuler" */;
 			buildPhases = (
-				9BC54CE11A5C29D600A96D6F /* Sources */,
-				9BC54CE21A5C29D600A96D6F /* Frameworks */,
-				9BC54CE31A5C29D600A96D6F /* Resources */,
+				9BC54D0A1A5C2A7300A96D6F /* Sources */,
+				9BC54D0B1A5C2A7300A96D6F /* Frameworks */,
+				9BC54D0C1A5C2A7300A96D6F /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -123,123 +79,53 @@
 			);
 			name = SwiftEuler;
 			productName = SwiftEuler;
-			productReference = 9BC54CE51A5C29D600A96D6F /* SwiftEuler.app */;
-			productType = "com.apple.product-type.application";
-		};
-		9BC54CF41A5C29D600A96D6F /* SwiftEulerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9BC54D021A5C29D600A96D6F /* Build configuration list for PBXNativeTarget "SwiftEulerTests" */;
-			buildPhases = (
-				9BC54CF11A5C29D600A96D6F /* Sources */,
-				9BC54CF21A5C29D600A96D6F /* Frameworks */,
-				9BC54CF31A5C29D600A96D6F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9BC54CF71A5C29D600A96D6F /* PBXTargetDependency */,
-			);
-			name = SwiftEulerTests;
-			productName = SwiftEulerTests;
-			productReference = 9BC54CF51A5C29D600A96D6F /* SwiftEulerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			productReference = 9BC54D0E1A5C2A7300A96D6F /* SwiftEuler */;
+			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9BC54CDD1A5C29D600A96D6F /* Project object */ = {
+		9BC54D061A5C2A7300A96D6F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Ziofrtiz;
 				TargetAttributes = {
-					9BC54CE41A5C29D600A96D6F = {
+					9BC54D0D1A5C2A7300A96D6F = {
 						CreatedOnToolsVersion = 6.1.1;
-					};
-					9BC54CF41A5C29D600A96D6F = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 9BC54CE41A5C29D600A96D6F;
 					};
 				};
 			};
-			buildConfigurationList = 9BC54CE01A5C29D600A96D6F /* Build configuration list for PBXProject "SwiftEuler" */;
+			buildConfigurationList = 9BC54D091A5C2A7300A96D6F /* Build configuration list for PBXProject "SwiftEuler" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
-			mainGroup = 9BC54CDC1A5C29D600A96D6F;
-			productRefGroup = 9BC54CE61A5C29D600A96D6F /* Products */;
+			mainGroup = 9BC54D051A5C2A7300A96D6F;
+			productRefGroup = 9BC54D0F1A5C2A7300A96D6F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9BC54CE41A5C29D600A96D6F /* SwiftEuler */,
-				9BC54CF41A5C29D600A96D6F /* SwiftEulerTests */,
+				9BC54D0D1A5C2A7300A96D6F /* SwiftEuler */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		9BC54CE31A5C29D600A96D6F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9BC54CED1A5C29D600A96D6F /* Images.xcassets in Resources */,
-				9BC54CF01A5C29D600A96D6F /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9BC54CF31A5C29D600A96D6F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		9BC54CE11A5C29D600A96D6F /* Sources */ = {
+		9BC54D0A1A5C2A7300A96D6F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BC54CEB1A5C29D600A96D6F /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9BC54CF11A5C29D600A96D6F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9BC54CFC1A5C29D600A96D6F /* SwiftEulerTests.swift in Sources */,
+				9BC54D121A5C2A7300A96D6F /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		9BC54CF71A5C29D600A96D6F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9BC54CE41A5C29D600A96D6F /* SwiftEuler */;
-			targetProxy = 9BC54CF61A5C29D600A96D6F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		9BC54CEE1A5C29D600A96D6F /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9BC54CEF1A5C29D600A96D6F /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		9BC54CFD1A5C29D600A96D6F /* Debug */ = {
+		9BC54D131A5C2A7300A96D6F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -256,7 +142,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -281,7 +166,7 @@
 			};
 			name = Debug;
 		};
-		9BC54CFE1A5C29D600A96D6F /* Release */ = {
+		9BC54D141A5C2A7300A96D6F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -298,7 +183,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -316,93 +200,41 @@
 			};
 			name = Release;
 		};
-		9BC54D001A5C29D600A96D6F /* Debug */ = {
+		9BC54D161A5C2A7300A96D6F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = SwiftEuler/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		9BC54D011A5C29D600A96D6F /* Release */ = {
+		9BC54D171A5C2A7300A96D6F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = SwiftEuler/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		9BC54D031A5C29D600A96D6F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SwiftEulerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftEuler.app/Contents/MacOS/SwiftEuler";
-			};
-			name = Debug;
-		};
-		9BC54D041A5C29D600A96D6F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SwiftEulerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftEuler.app/Contents/MacOS/SwiftEuler";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9BC54CE01A5C29D600A96D6F /* Build configuration list for PBXProject "SwiftEuler" */ = {
+		9BC54D091A5C2A7300A96D6F /* Build configuration list for PBXProject "SwiftEuler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9BC54CFD1A5C29D600A96D6F /* Debug */,
-				9BC54CFE1A5C29D600A96D6F /* Release */,
+				9BC54D131A5C2A7300A96D6F /* Debug */,
+				9BC54D141A5C2A7300A96D6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9BC54CFF1A5C29D600A96D6F /* Build configuration list for PBXNativeTarget "SwiftEuler" */ = {
+		9BC54D151A5C2A7300A96D6F /* Build configuration list for PBXNativeTarget "SwiftEuler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9BC54D001A5C29D600A96D6F /* Debug */,
-				9BC54D011A5C29D600A96D6F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		9BC54D021A5C29D600A96D6F /* Build configuration list for PBXNativeTarget "SwiftEulerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9BC54D031A5C29D600A96D6F /* Debug */,
-				9BC54D041A5C29D600A96D6F /* Release */,
+				9BC54D161A5C2A7300A96D6F /* Debug */,
+				9BC54D171A5C2A7300A96D6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9BC54CDD1A5C29D600A96D6F /* Project object */;
+	rootObject = 9BC54D061A5C2A7300A96D6F /* Project object */;
 }
