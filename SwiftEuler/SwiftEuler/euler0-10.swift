@@ -114,12 +114,32 @@ class Exercise0To10: ExerciseGroupable {
         return String(result)
     }
     
-    var exercise6 = Exercise(description: "") { () -> (String) in
-        return ""
+    var exercise6 = Exercise(description: "The sum of the squares of the first ten natural numbers is, 12 + 22 + ... + 102 = 385. The square of the sum of the first ten natural numbers is, (1 + 2 + ... + 10)2 = 552 = 3025 Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640. Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.") { () -> (String) in
+        
+        var sumOfSquares = 0;
+        var squareOfSums = 0;
+        
+        for i in 1...100 {
+            sumOfSquares += i * i
+            squareOfSums += i
+        }
+        
+        squareOfSums *= squareOfSums
+        
+        return String(squareOfSums - sumOfSquares)
     }
     
-    var exercise7 = Exercise(description: "") { () -> (String) in
-        return ""
+    var exercise7 = Exercise(description: "By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13. What is the 10 001st prime number?") { () -> (String) in
+        
+        
+        var primes = Primes()
+        
+        var number = 0
+        for i in 0...10000 {
+            number = primes.next()!
+        }
+        
+        return String(number)
     }
     
     var exercise8 = Exercise(description: "") { () -> (String) in
@@ -130,4 +150,42 @@ class Exercise0To10: ExerciseGroupable {
         return ""
     }
     
+}
+
+struct Primes : GeneratorType {
+    
+    typealias Element = Int
+    
+    var primes : [Int] = Array()
+    
+    mutating func next() -> Element? {
+        
+        if primes.count == 0 {
+            primes.append(2)
+            return 2
+        }
+        
+        var next = primes.last!
+        
+        while true {
+            next++
+            var isPrime = true
+            let limit = Int(sqrt(Float(next)))
+            
+            for divider in primes {
+                if (divider > limit) {
+                    break
+                }
+                isPrime = (next%divider != 0)
+                if !isPrime {
+                    break
+                }
+            }
+            
+            if isPrime {
+                primes.append(next)
+                return next
+            }
+        }
+    }
 }
