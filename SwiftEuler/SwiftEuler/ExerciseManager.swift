@@ -21,8 +21,10 @@ class Exercise {
     
     func run() {
         println("Problem:\n\(self.description)")
+        let start = CFAbsoluteTimeGetCurrent()
         self.solution = runBlock()
         println("\nSolution:    \(self.solution)")
+        println("\nExecution time:    \(CFAbsoluteTimeGetCurrent() - start) sec")
     }
 }
 

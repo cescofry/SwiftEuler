@@ -41,16 +41,77 @@ class Exercise0To10: ExerciseGroupable {
         return String(total)
     }
 
-    var exercise3 = Exercise(description: "") { () -> (String) in
-        return ""
+    var exercise3 = Exercise(description: "The prime factors of 13195 are 5, 7, 13 and 29. What is the largest prime factor of the number 600851475143 ?") { () -> (String) in
+        var input = 600851475143
+        var primeFactor = 1
+        var result = 0;
+        while input > 1 {
+            
+            primeFactor++
+            if (input%primeFactor == 0) {
+                println("\(input) / \(primeFactor)")
+                input /= primeFactor
+                result = primeFactor
+                
+            }
+            
+        }
+        
+        return String(primeFactor)
     }
     
-    var exercise4 = Exercise(description: "") { () -> (String) in
-        return ""
+    var exercise4 = Exercise(description: "A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99. Find the largest palindrome made from the product of two 3-digit numbers.") { () -> (String) in
+    
+        
+        func isPalindromic(number : Int) -> Bool {
+            let stringProd = String(number)
+            let reverseProd = String(reverse(stringProd))
+            
+            return (stringProd == reverseProd)
+        }
+        
+        var result = 0
+        
+        for i in 1...999 {
+            for j in (i - 1)...999 {
+                let product = i * j
+                
+                if (isPalindromic(product) && result < product) {
+                    println("\(product) = \(i) x \(j)")
+                    result = product
+                }
+            }
+        }
+        
+        return String(result)
     }
     
-    var exercise5 = Exercise(description: "") { () -> (String) in
-        return ""
+    var exercise5 = Exercise(description: "2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder. What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?") { () -> (String) in
+        
+        
+        func isDivisible(number : Int, until: Int) -> Bool {
+            for i in reverse(1...until) {
+                if (number%i != 0) {
+                    return false
+                }
+            }
+            
+            return true
+        }
+        
+        var result = 20
+        var dividedByAll = false
+        
+        while !dividedByAll {
+            
+            if (isDivisible(result, 20)) {
+                dividedByAll = true
+            }
+            result +=  (20 * 19) - (result%20)
+        }
+        
+        
+        return String(result)
     }
     
     var exercise6 = Exercise(description: "") { () -> (String) in
