@@ -294,12 +294,72 @@ class Exercise10To20: ExerciseGroupable {
         return String(resultDigits)
     }
     
-    var exercise4 = Exercise(description: "") { () -> (String) in
-        return ""
+    var exercise4 = Exercise(description: "The following iterative sequence is defined for the set of positive integers: n → n/2 (n is even) n → 3n + 1 (n is odd) Using the rule above and starting with 13, we generate the following sequence: 13 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1 It can be seen that this sequence (starting at 13 and finishing at 1) contains 10 terms. Although it has not been proved yet (Collatz Problem), it is thought that all starting numbers finish at 1. Which starting number, under one million, produces the longest chain? NOTE: Once the chain starts the terms are allowed to go above one million.") { () -> (String) in
+        
+        
+        struct Collatz : GeneratorType {
+            var currentElement : Int
+            typealias Element = Int
+            
+            private mutating func next() -> Element? {
+                
+                if (currentElement == 1) {
+                    return nil
+                }
+                
+                if currentElement%2 == 0 {
+                    currentElement /= 2
+                }
+                else {
+                    currentElement = (currentElement * 3) + 1
+                }
+                
+                return currentElement
+            }
+        }
+        
+        var result = 0
+        var max = 0
+        
+        for i in 1...1000000 {
+            var coll = Collatz(currentElement: i)
+            
+            var count = 0
+            
+            while let next = coll.next() {
+                count++
+            }
+            
+            if (count > max) {
+                max = count
+                result = i
+            }
+            
+        }
+        
+        return String(result)
     }
     
-    var exercise5 = Exercise(description: "") { () -> (String) in
-        return ""
+    var exercise5 = Exercise(description: "Starting in the top left corner of a 2×2 grid, and only being able to move to the right and down, there are exactly 6 routes to the bottom right corner. How many such routes are there through a 20×20 grid?") { () -> (String) in
+        
+        // 1: 1 + 1 : 0
+        // 2: 1 + 2 + 3 : 1, 1
+        // 3: 1 + 3 + 6 + 10 : 2, 3, 4
+        // 4: 1 + 4 + 10 : 3, 6, ?
+        
+    
+        var result = 0
+        var current = 1
+        var sidesX = 3
+        var sidesY = 3
+        for i in 1...sidesX { // 3 times
+            current += (sidesY - 1)
+            result += current
+            
+            println(current)
+        }
+        
+        return String(result)
     }
     
     var exercise6 = Exercise(description: "") { () -> (String) in
