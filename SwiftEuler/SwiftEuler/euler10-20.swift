@@ -15,8 +15,10 @@ class Exercise10To20: ExerciseGroupable {
         var primes = Primes()
         
         var result = 0
-        for i in 0...2000000 {
-            result += primes.next()!
+        var next = 0
+        while next < 2000000 {
+            result += next
+            next = primes.next()!
         }
         
         return String(result)
