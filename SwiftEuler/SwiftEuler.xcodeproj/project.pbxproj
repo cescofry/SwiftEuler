@@ -10,6 +10,8 @@
 		9BC54D121A5C2A7300A96D6F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC54D111A5C2A7300A96D6F /* main.swift */; };
 		9BC54D191A5C2AC800A96D6F /* euler0-10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC54D181A5C2AC800A96D6F /* euler0-10.swift */; };
 		9BC54D1B1A5C302900A96D6F /* ExerciseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC54D1A1A5C302900A96D6F /* ExerciseManager.swift */; };
+		A5C524F61A5CB3D6009E3B35 /* euler10-20.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C524F51A5CB3D6009E3B35 /* euler10-20.swift */; };
+		A5C524F81A5CB461009E3B35 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C524F71A5CB461009E3B35 /* Math.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +31,8 @@
 		9BC54D111A5C2A7300A96D6F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		9BC54D181A5C2AC800A96D6F /* euler0-10.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "euler0-10.swift"; sourceTree = "<group>"; };
 		9BC54D1A1A5C302900A96D6F /* ExerciseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseManager.swift; sourceTree = "<group>"; };
+		A5C524F51A5CB3D6009E3B35 /* euler10-20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "euler10-20.swift"; sourceTree = "<group>"; };
+		A5C524F71A5CB461009E3B35 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +67,9 @@
 			children = (
 				9BC54D111A5C2A7300A96D6F /* main.swift */,
 				9BC54D181A5C2AC800A96D6F /* euler0-10.swift */,
+				A5C524F51A5CB3D6009E3B35 /* euler10-20.swift */,
 				9BC54D1A1A5C302900A96D6F /* ExerciseManager.swift */,
+				A5C524F71A5CB461009E3B35 /* Math.swift */,
 			);
 			path = SwiftEuler;
 			sourceTree = "<group>";
@@ -124,9 +130,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5C524F61A5CB3D6009E3B35 /* euler10-20.swift in Sources */,
 				9BC54D1B1A5C302900A96D6F /* ExerciseManager.swift in Sources */,
 				9BC54D121A5C2A7300A96D6F /* main.swift in Sources */,
 				9BC54D191A5C2AC800A96D6F /* euler0-10.swift in Sources */,
+				A5C524F81A5CB461009E3B35 /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -100,6 +100,8 @@ class ExerciseManager {
         switch classNumber {
         case 0:
             exerciseGroup = ExerciseGroup(exercises: Exercise0To10())
+        case 1:
+            exerciseGroup = ExerciseGroup(exercises: Exercise10To20())
         default:
             exerciseGroup = nil
         }
