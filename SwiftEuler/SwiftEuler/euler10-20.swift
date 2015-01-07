@@ -342,28 +342,34 @@ class Exercise10To20: ExerciseGroupable {
     
     var exercise5 = Exercise(description: "Starting in the top left corner of a 2×2 grid, and only being able to move to the right and down, there are exactly 6 routes to the bottom right corner. How many such routes are there through a 20×20 grid?") { () -> (String) in
         
-        // 1: 1 + 1 : 0
-        // 2: 1 + 2 + 3 : 1, 1
-        // 3: 1 + 3 + 6 + 10 : 2, 3, 4
-        // 4: 1 + 4 + 10 : 3, 6, ?
         
+        // Combinatorics solution. Not really mine!
+        var size = 20
+        var paths = 1
+        
+        for i in 0..<size {
+            paths *= (2 * size) - i
+            paths /= i + 1
+        }
+        
+        return String(paths)
+    }
     
-        var result = 0
-        var current = 1
-        var sidesX = 3
-        var sidesY = 3
-        for i in 1...sidesX { // 3 times
-            current += (sidesY - 1)
-            result += current
+    var exercise6 = Exercise(description: "2^15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of the number 2^1000?") { () -> (String) in
+        
+        
+        let value = pow(2.0, 1000.0)
+        let lenght = Int(ceil(log10(value)))
+
+        var result = 0;
+        for i in reverse(0..<lenght) {
+            let divider = pow(10.0, Double(i))
+            let digit = Int((value / divider)%10)
+            result += digit
             
-            println(current)
         }
         
         return String(result)
-    }
-    
-    var exercise6 = Exercise(description: "") { () -> (String) in
-        return ""
     }
     
     var exercise7 = Exercise(description: "") { () -> (String) in
