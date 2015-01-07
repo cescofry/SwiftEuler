@@ -75,12 +75,11 @@ struct Triangles : GeneratorType {
 
 
 func parseInput(input: String) {
-    var lines = input.componentsSeparatedByString("|")
+    var lines = input.componentsSeparatedByString(" ")
     
-    for (index, line) in enumerate(lines) {
-        let lineCommas = line.stringByReplacingOccurrencesOfString(" ", withString: ", ", options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil)
-        let varLine = "matrix.append([\(lineCommas)])"
-        
+    for line in lines {
+        let varLine = "numbers.append(\"\(line)\")"
         println(varLine)
     }
+    
 }
