@@ -102,6 +102,8 @@ class ExerciseManager {
             exerciseGroup = ExerciseGroup(exercises: Exercise0To10())
         case 1:
             exerciseGroup = ExerciseGroup(exercises: Exercise10To20())
+        case 2:
+            exerciseGroup = ExerciseGroup(exercises: Exercise20To30())
         default:
             exerciseGroup = nil
         }

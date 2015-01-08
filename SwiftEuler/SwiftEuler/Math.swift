@@ -73,13 +73,46 @@ struct Triangles : GeneratorType {
     }
 }
 
+func factorial(x: Double) -> Double {
+    return factorial_(x, 1)
+}
+
+private func factorial_(var x: Double, var reminder: Double) -> Double {
+    if (x == 1) {
+        return reminder
+    }
+    
+    reminder *= x
+    x--
+    return factorial_(x, reminder)
+}
+
+func sumOfDigits(x: Double) -> Int {
+    let count = Int(log10(x))
+    
+    var result = 0
+    
+    for i in 0...count {
+        let divider = pow(10.0, Double(i))
+        let digit = Int(ceil(x / divider)%10)
+        result += digit
+    }
+    
+    return result
+}
+
+
 
 func parseInput(input: String) {
-    var lines = input.componentsSeparatedByString(" ")
+    var lines = input.componentsSeparatedByString("|")
     
     for line in lines {
-        let varLine = "numbers.append(\"\(line)\")"
+        
+        let numbers = line.componentsSeparatedByString(" ") as NSArray
+        let numbersLine = numbers.componentsJoinedByString(", ")
+        let varLine = "linkedList.append([\(numbersLine)])"
         println(varLine)
+        
     }
     
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B67408E1A5E9ADB0071EAB3 /* euler20-30.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B67408D1A5E9ADB0071EAB3 /* euler20-30.swift */; };
 		9BC54D121A5C2A7300A96D6F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC54D111A5C2A7300A96D6F /* main.swift */; };
 		9BC54D191A5C2AC800A96D6F /* euler0-10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC54D181A5C2AC800A96D6F /* euler0-10.swift */; };
 		9BC54D1B1A5C302900A96D6F /* ExerciseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC54D1A1A5C302900A96D6F /* ExerciseManager.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9B67408D1A5E9ADB0071EAB3 /* euler20-30.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "euler20-30.swift"; sourceTree = "<group>"; };
 		9BC54D0E1A5C2A7300A96D6F /* SwiftEuler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftEuler; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC54D111A5C2A7300A96D6F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		9BC54D181A5C2AC800A96D6F /* euler0-10.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "euler0-10.swift"; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				9BC54D111A5C2A7300A96D6F /* main.swift */,
 				9BC54D181A5C2AC800A96D6F /* euler0-10.swift */,
 				A5C524F51A5CB3D6009E3B35 /* euler10-20.swift */,
+				9B67408D1A5E9ADB0071EAB3 /* euler20-30.swift */,
 				9BC54D1A1A5C302900A96D6F /* ExerciseManager.swift */,
 				A5C524F71A5CB461009E3B35 /* Math.swift */,
 			);
@@ -130,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B67408E1A5E9ADB0071EAB3 /* euler20-30.swift in Sources */,
 				A5C524F61A5CB3D6009E3B35 /* euler10-20.swift in Sources */,
 				9BC54D1B1A5C302900A96D6F /* ExerciseManager.swift in Sources */,
 				9BC54D121A5C2A7300A96D6F /* main.swift in Sources */,

@@ -372,15 +372,82 @@ class Exercise10To20: ExerciseGroupable {
         return String(result)
     }
     
-    var exercise7 = Exercise(description: "") { () -> (String) in
-        return ""
+    var exercise7 = Exercise(description: "If the numbers 1 to 5 are written out in words: one, two, three, four, five, then there are 3 + 3 + 5 + 4 + 4 = 19 letters used in total. If all the numbers from 1 to 1000 (one thousand) inclusive were written out in words, how many letters would be used? NOTE: Do not count spaces or hyphens. For example, 342 (three hundred and forty-two) contains 23 letters and 115 (one hundred and fifteen) contains 20 letters. The use of \"and\" when writing out numbers is in compliance with British usage.") { () -> (String) in
+        
+        
+        // Kind of cheating using a formatter!
+        
+        let formatter = NSNumberFormatter()
+        formatter.numberStyle = NSNumberFormatterStyle.SpellOutStyle
+        formatter.locale = NSLocale(localeIdentifier: "en-US")
+        
+        let charset = NSCharacterSet(charactersInString:"- ")
+        
+        var result = 0
+        
+        for i in 1...1000 {
+            
+            if let stringFormatted = formatter.stringFromNumber(i) {
+                
+                var stringNum = (stringFormatted.componentsSeparatedByCharactersInSet(charset) as NSArray).componentsJoinedByString("")
+
+                println(stringNum)
+                result += countElements(stringNum)
+                
+                // Account for missing AND ond spell out
+                if (i > 100 && i%100 != 0) {
+                    result += 3
+                }
+            }
+            
+            
+        }
+        
+        return String(result)
     }
     
-    var exercise8 = Exercise(description: "") { () -> (String) in
-        return ""
+    var exercise8 = Exercise(description: "By starting at the top of the triangle below and moving to adjacent numbers on the row below, the maximum total from top to bottom is 23. That is, 3 + 7 + 4 + 9 = 23. Find the maximum total from top to bottom of the triangle below: NOTE: As there are only 16384 routes, it is possible to solve this problem by trying every route. However, Problem 67, is the same challenge with a triangle containing one-hundred rows; it cannot be solved by brute force, and requires a clever method! ;o)") { () -> (String) in
+        
+        
+        var arrayInput : [[Int]] = Array()
+        
+        arrayInput.append([75])
+        arrayInput.append([95, 64])
+        arrayInput.append([17, 47, 82])
+        arrayInput.append([18, 35, 87, 10])
+        arrayInput.append([20, 04, 82, 47, 65])
+        arrayInput.append([19, 01, 23, 75, 03, 34])
+        arrayInput.append([88, 02, 77, 73, 07, 63, 67])
+        arrayInput.append([99, 65, 04, 28, 06, 16, 70, 92])
+        arrayInput.append([41, 41, 26, 56, 83, 40, 80, 70, 33])
+        arrayInput.append([41, 48, 72, 33, 47, 32, 37, 16, 94, 29])
+        arrayInput.append([53, 71, 44, 65, 25, 43, 91, 52, 97, 51, 14])
+        arrayInput.append([70, 11, 33, 28, 77, 73, 17, 78, 39, 68, 17, 57])
+        arrayInput.append([91, 71, 52, 38, 17, 14, 91, 43, 58, 50, 27, 29, 48])
+        arrayInput.append([63, 66, 04, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31])
+        arrayInput.append([04, 62, 98, 27, 23, 09, 70, 98, 73, 93, 38, 53, 60, 04, 23])
+        
+        
+        for lineN in reverse(1...(arrayInput.count - 1)) {
+            let line = arrayInput[lineN]
+            let prevLine = arrayInput[lineN - 1]
+            var newPrevLine : [Int] = Array()
+            
+            for elementN in 0...(line.count-2) {
+                let left = line[elementN]
+                let right = line[elementN + 1]
+                let parent = prevLine[elementN]
+                let newParent = parent + max(left, right)
+                newPrevLine.append(newParent)
+            }
+            
+            arrayInput[lineN - 1] = newPrevLine
+        }
+        
+        return String(arrayInput[0][0])
     }
     
     var exercise9 = Exercise(description: "") { () -> (String) in
-        return ""
+        return "Cannot be botherd"
     }
 }
