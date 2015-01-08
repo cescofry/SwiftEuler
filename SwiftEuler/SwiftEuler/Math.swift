@@ -92,9 +92,9 @@ func sumOfDigits(x: Double) -> Int {
     
     var result = 0
     
-    for i in 0...count {
+    for i in reverse(0...count) {
         let divider = pow(10.0, Double(i))
-        let digit = Int(ceil(x / divider)%10)
+        let digit = Int(floor(x / divider)%10)
         result += digit
     }
     
