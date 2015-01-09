@@ -52,6 +52,19 @@ struct Primes : GeneratorType {
     }
 }
 
+class PrimeSubscriptor {
+    
+    var primes = Primes()
+    
+    subscript(index: Int) -> Int {
+        while primes.primes.count <= index {
+            primes.next()
+        }
+        
+        return primes.primes[index]
+    }
+}
+
 struct Triangles : GeneratorType {
     
     typealias Element = Int
@@ -99,6 +112,54 @@ func sumOfDigits(x: Double) -> Int {
     }
     
     return result
+}
+
+
+func sumOfDivisors(x: Int) -> Int {
+    
+    return sumOfFactorsPrime(x)
+    
+    var result = 0
+    for i in 1...x {
+        if (x == i) {
+            continue
+        }
+        if (x%i == 0) {
+            result += i
+        }
+    }
+    
+    return result
+}
+
+func sumOfFactorsPrime(number : Int) -> Int {
+    var n = number
+    var sum = 1
+    var primes = PrimeSubscriptor()
+    var p = primes[0]
+    var j : Int
+    var i = 0;
+    let limit = sqrt(number)
+    
+    while (p * p <= n && n > 1 && i < limit) {
+        p = primes[i];
+        i++;
+        if (n % p == 0) {
+            j = p * p;
+            n = n / p;
+            while (n % p == 0) {
+                j = j * p;
+                n = n / p;
+            }
+            sum = sum * (j - 1) / (p - 1);
+        }
+    }
+    
+    //A prime factor larger than the square root remains
+    if (n > 1) {
+        sum *= n + 1;
+    }
+    return sum - number;
 }
 
 

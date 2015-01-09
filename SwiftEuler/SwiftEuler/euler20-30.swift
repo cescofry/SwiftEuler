@@ -21,31 +21,16 @@ class Exercise20To30: ExerciseGroupable {
     
     var exercise1 = Exercise(description: "Let d(n) be defined as the sum of proper divisors of n (numbers less than n which divide evenly into n). If d(a) = b and d(b) = a, where a ≠ b, then a and b are an amicable pair and each of a and b are called amicable numbers. For example, the proper divisors of 220 are 1, 2, 4, 5, 10, 11, 20, 22, 44, 55 and 110; therefore d(220) = 284. The proper divisors of 284 are 1, 2, 4, 71 and 142; so d(284) = 220. Evaluate the sum of all the amicable numbers under 10000.") { () -> (String) in
         
-        func sumOfDividers(x: Int) ->Int {
 
-            var result = 0
-            for i in 1...x {
-                if (x == i) {
-                    continue
-                }
-                if (x%i == 0) {
-                    result += i
-                }
-            }
-            
-            return result
-        }
-        
-        
         var result = 0
         for i in 2...10000 {
 
-            let iSum = sumOfDividers(i)
+            let iSum = sumOfDivisors(i)
             if (i == iSum) {
                 continue
             }
             
-            if (i == sumOfDividers(iSum)) {
+            if (i == sumOfDivisors(iSum)) {
                 result += iSum + i
             }
             
@@ -124,8 +109,60 @@ class Exercise20To30: ExerciseGroupable {
         return String(result)
     }
     
-    var exercise3 = Exercise(description: "") { () -> (String) in
-        return ""
+    var exercise3 = Exercise(description: "A perfect number is a number for which the sum of its proper divisors is exactly equal to the number. For example, the sum of the proper divisors of 28 would be 1 + 2 + 4 + 7 + 14 = 28, which means that 28 is a perfect number. A number n is called deficient if the sum of its proper divisors is less than n and it is called abundant if this sum exceeds n. As 12 is the smallest abundant number, 1 + 2 + 3 + 4 + 6 = 16, the smallest number that can be written as the sum of two abundant numbers is 24. By mathematical analysis, it can be shown that all integers greater than 28123 can be written as the sum of two abundant numbers. However, this upper limit cannot be reduced any further by analysis even though it is known that the greatest number that cannot be expressed as the sum of two abundant numbers is less than this limit. Find the sum of all the positive integers which cannot be written as the sum of two abundant numbers.") { () -> (String) in
+        
+        
+        struct Abundants : GeneratorType {
+            
+            var current = 0
+            let limit = 28123
+            typealias Element = Int
+            
+            private mutating func next() -> Element? {
+                
+                for i in (current + 1)...limit {
+                    if sumOfDivisors(i) > i {
+                        current = i
+                        return i
+                    }
+                }
+                
+                return nil
+                
+            }
+            
+            mutating func all() -> [Int] {
+                current = 0
+                var all : [Int] = Array()
+                
+                while let next = self.next() {
+                    all.append(next)
+                }
+                
+                return all
+            }
+        }
+        
+        
+        var abundants = Abundants()
+        let all = abundants.all()
+        
+        var abundantsSum : [Int : Bool] = Dictionary()
+        for i in 0...abundants.limit {
+            for j in 0...abundants.limit {
+                abundantsSum[i + j] = true
+            }
+        }
+        
+        var result = 0
+        for i in 1...abundants.limit {
+            if abundantsSum[i] == nil {
+                result += i
+            }
+        }
+        
+        
+        return String(result)
     }
     
     var exercise4 = Exercise(description: "") { () -> (String) in
