@@ -118,7 +118,7 @@ func sumOfDigits(x: Double) -> Int {
 func sumOfDivisors(x: Int) -> Int {
     
     return sumOfFactorsPrime(x)
-    
+    /*
     var result = 0
     for i in 1...x {
         if (x == i) {
@@ -130,6 +130,7 @@ func sumOfDivisors(x: Int) -> Int {
     }
     
     return result
+*/
 }
 
 func sumOfFactorsPrime(number : Int) -> Int {

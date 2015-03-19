@@ -165,12 +165,54 @@ class Exercise20To30: ExerciseGroupable {
         return String(result)
     }
     
-    var exercise4 = Exercise(description: "") { () -> (String) in
-        return ""
+    var exercise4 = Exercise(description: "A permutation is an ordered arrangement of objects. For example, 3124 is one possible permutation of the digits 1, 2, 3 and 4. If all of the permutations are listed numerically or alphabetically, we call it lexicographic order. The lexicographic permutations of 0, 1 and 2 are: 012   021   102   120   201   210 What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9?") { () -> (String) in
+        
+       return ""
     }
     
-    var exercise5 = Exercise(description: "") { () -> (String) in
-        return ""
+    var exercise5 = Exercise(description: "The Fibonacci sequence is defined by the recurrence relation: Fn = Fn−1 + Fn−2, where F1 = 1 and F2 = 1. The 12th term, F12, is the first term to contain three digits. What is the first term in the Fibonacci sequence to contain 1000 digits?") { () -> (String) in
+        
+        
+        struct Fibonacci : GeneratorType {
+            typealias Element = Double
+            var all : [Element] = Array()
+            var currentIndex = 0
+            
+            private mutating func next() -> Element? {
+                
+                var result = 0.0e1000
+                
+                if (currentIndex > 0){
+                    let mi1 = Double(self.all[(currentIndex - 1)])
+                    result += mi1
+                }
+
+                if (currentIndex > 1) {
+                    let mi2 = Double(self.all[(currentIndex - 2)])
+                    result += mi2
+                }
+                
+                if (result == 0) {
+                    result = 1
+                }
+                
+                self.all.append(result)
+                currentIndex++;
+                
+                return result
+            }
+        }
+        
+        var fibonacci = Fibonacci()
+        var next = 1.0e1000
+        next = Double(fibonacci.next()!)
+        while (true) {
+            if (next >= 1.0e1000) {
+                return "\(next) -> \(fibonacci.all.count)"
+            }
+            next = Double(fibonacci.next()!)
+        }
+        
     }
     
     var exercise6 = Exercise(description: "") { () -> (String) in
